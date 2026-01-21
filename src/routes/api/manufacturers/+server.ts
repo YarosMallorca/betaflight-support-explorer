@@ -1,10 +1,10 @@
-import { GITHUB_PAT } from "$env/static/private"
+import { env } from "$env/dynamic/private"
 import { Octokit } from "octokit"
 import { json } from "@sveltejs/kit"
 import type { CBManufacturer } from "$lib/cloudBuildTypes"
 
 const octokit = new Octokit({
-	auth: GITHUB_PAT
+	auth: env.GITHUB_PAT
 })
 
 export async function GET() {
