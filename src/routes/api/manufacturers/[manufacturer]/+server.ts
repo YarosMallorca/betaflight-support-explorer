@@ -3,6 +3,9 @@ import { Octokit } from "octokit"
 import { json } from "@sveltejs/kit"
 import type { CBManufacturer } from "$lib/cloudBuildTypes"
 
+if (!env.GITHUB_PAT) {
+	throw new Error("GITHUB_PAT environment variable is required")
+}
 const octokit = new Octokit({
 	auth: env.GITHUB_PAT
 })

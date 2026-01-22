@@ -56,7 +56,7 @@ A web-based tool for analyzing Betaflight firmware support data and build inform
    cp .env.example .env
    ```
 
-   And set your `GITHUB_PAT` in the `.env` file. Create one [here](https://github.com/settings/tokens)
+   And set your `GITHUB_PAT` in the `.env` file. Create one in the [GitHub Personal Access Tokens settings](https://github.com/settings/tokens)
 
 3. Build and run the Docker container:
 
