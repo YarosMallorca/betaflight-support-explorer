@@ -3,9 +3,7 @@ import { Octokit } from "octokit"
 import { json } from "@sveltejs/kit"
 import type { CBManufacturer } from "$lib/cloudBuildTypes"
 
-const octokit = new Octokit({
-	auth: env.GITHUB_PAT
-})
+const octokit = new Octokit(env.GITHUB_PAT ? { auth: env.GITHUB_PAT } : {})
 
 export async function GET() {
 	try {
